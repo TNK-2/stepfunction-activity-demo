@@ -1,0 +1,20 @@
+{
+  "Comment": "Demo",
+  "StartAt": "test1",
+  "States": {
+    "test1": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:ap-northeast-1:xxxxxxxxxx:activity:dddddddddd",
+      "Next": "Pass State"
+    },
+    "Pass State": {
+      "Type": "Pass",
+      "Next": "test2"
+    },
+    "test2": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:ap-northeast-1:xxxxxxxxxx:activity:ddddddddddd",
+      "End": true
+    }
+  }
+}
